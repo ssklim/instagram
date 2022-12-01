@@ -1,0 +1,48 @@
+show databases;
+drop database instagram;
+create database instagram;
+use instagram;
+show tables;
+
+create table user(
+userID varchar(20),
+userPassword varchar(20) ,
+userName varchar(20) ,
+userNickname varchar(20),
+primary key(userID)
+);
+
+create table bbs(
+boardUserID varchar(20),
+bbsID int(50),
+userID varchar(255),
+bbsDate DATETIME,
+bbsContent varchar(2200),
+bbsAvailable int(50),
+primary key(bbsID)
+);
+
+create table comment(
+boardUserID varchar(20),
+commentID int(50),
+bbsID int(50),
+userID varchar(20),
+commentDate varchar(50),
+commentText varchar(220),
+commentAvailable int(11)
+);
+alter table comment add primary key (commentID, bbsID);
+alter table comment add constraint bbsIDcomment foreign key (bbsID) references bbs(bbsID);
+
+create table follow(
+followerID varchar(20),
+followingID varchar(20)
+);
+
+create table heart(
+userID varchar(20),
+bbsID int(11),
+likeBbs int(11)
+);
+alter table heart add primary key (bbsID, userID);
+alter table heart add constraint bbsIDheart foreign key (bbsID) references bbs(bbsID);
