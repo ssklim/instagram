@@ -59,12 +59,12 @@ img.logo_instagram {
 a {
     cursor: default;
 }
-.button_forgot {
+.button_join {
     color : #00366B;
     align-self: center;
     font-size: 12px;
     margin-top: 70px;
 }
-.button_forgot:hover {
+.button_join:hover {
     cursor: pointer;
 }

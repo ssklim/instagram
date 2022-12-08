@@ -17,7 +17,7 @@
 		        <input type="password" class="input_login" name="userPassword" id="userPW" placeholder="비밀번호">
 		        <a href="#none"><button id="btn_login" disabled>로그인</button></a>
         	</form>
-        <span class="button_forgot">비밀번호를 잊으셨나요?</span>
+        <span class="button_join"><a href="join.jsp">회원가입</a></span>
     </div>
     <script src="js/login.js"></script>
 </body>

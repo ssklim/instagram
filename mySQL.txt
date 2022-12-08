@@ -1,0 +1,41 @@
+show databases;
+drop database instagram;
+create database instagram;
+use instagram;
+
+create table user(
+	userID varchar(20),
+	userPassword varchar(20) ,
+	userName varchar(20) ,
+	userNickname varchar(20),
+    userMessage varchar(50),
+	primary key(userID)
+);
+
+create table follow(
+	followerID varchar(20),
+	followingID varchar(20)
+);
+
+create table bbs(
+    bbsID int(50),
+    bbsTitle varchar(50),
+    userID varchar(20),
+    bbsDate DATETIME,
+    bbsContent varchar(2048),
+    bbsAvailable int, -- 0인경우에는 삭제가된것, 0이아닌경우에는 삭제가 되지않은것
+    PRIMARY KEY (bbsID)
+);
+
+create table comment(
+	commentID int(50),
+	bbsID int(50),
+	userID varchar(20),
+	commentDate varchar(50),
+	commentText varchar(220),
+	commentAvailable int(11)
+);
+alter table comment add primary key (commentID, bbsID);
+alter table comment add constraint bbsIDcomment foreign key (bbsID) references bbs(bbsID);
+
+show tables;

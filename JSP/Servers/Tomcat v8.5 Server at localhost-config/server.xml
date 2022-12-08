@@ -152,7 +152,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Instagram" path="/Instagram" reloadable="true" source="org.eclipse.jst.jee.server:Instagram"/></Host>
+      <Context docBase="Instagram" path="/Instagram" reloadable="true" source="org.eclipse.jst.jee.server:Instagram"/><Context docBase="instagram-sjh" path="/instagram-sjh" reloadable="true" source="org.eclipse.jst.jee.server:instagram-sjh"/><Context docBase="instagram-sjh2" path="/instagram-sjh2" reloadable="true" source="org.eclipse.jst.jee.server:instagram-sjh2"/><Context docBase="instagram-sjh (1)" path="/instagram-sjh_(1)" reloadable="true" source="org.eclipse.jst.jee.server:instagram-sjh (1)"/><Context docBase="Instagram_hge2" path="/Instagram_hge2" reloadable="true" source="org.eclipse.jst.jee.server:Instagram_hge2"/></Host>
     </Engine>
   </Service>
 </Server>
